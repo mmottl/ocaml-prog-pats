@@ -22,7 +22,7 @@ The package currently contains the following:
   * [Extensible ASTs](#extast)
   * [Arrows](#arrows)
 
-### Abstract Lexer {#abslex}
+### Abstract Lexer ### {#abslex}
 
 #### Quick introduction to syntactic analysis
 
