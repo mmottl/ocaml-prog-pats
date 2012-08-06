@@ -18,11 +18,11 @@ Contents
 
 The package currently contains the following:
 
-  * [Abstract Lexer](#abslex)
-  * [Extensible ASTs](#extast)
+  * [Abstract Lexer](#abstract_lexer)
+  * [Extensible ASTs](#extensible_asts)
   * [Arrows](#arrows)
 
-### Abstract Lexer ### {#abslex}
+### Abstract Lexer
 
 #### Quick introduction to syntactic analysis
 
@@ -139,7 +139,7 @@ rewritten to match one complex pattern and perform one action only instead.
 This will generally give a great boost to lexer performance, especially if
 it is abstract.
 
-### Extensible AST {#extast}
+### Extensible ASTs
 
 This simple example shows how to implement extensible abstract syntax trees
 (ASTs).  It uses polymorphic variants to achieve open recursion and to easily
@@ -151,7 +151,7 @@ as follows:
     :::sh
     ocamlbuild ast.native
 
-### Arrows {#arrows}
+### Arrows
 
 This project in directory `arrows` mostly translates the Haskell-code
 presented in the following paper to OCaml:
