@@ -1,0 +1,1 @@
+<functor_inst.ml>: pp(camlp4o -parser Camlp4MacroParser)

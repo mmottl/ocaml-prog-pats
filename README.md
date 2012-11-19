@@ -21,6 +21,7 @@ The package currently contains the following:
   * [Abstract Lexer](#abstract_lexer)
   * [Extensible ASTs](#extensible_asts)
   * [Arrows](#arrows)
+  * [Functor instantiation](#functor_instantiation)
 
 ### Abstract Lexer
 
@@ -193,6 +194,19 @@ functions as described in John Hughes' paper.  Module `Arrow` finally also
 implements monads by showing how we can obtain one from an arrow supporting
 arrow application and vice versa, thus proving their equivalence in terms
 of expressive power.
+
+### Functor instantiation
+
+The example in directory `functor_inst` demonstrates how to use the Camlp4
+preprocessor together with its standard `Camlp4MacroParser` to instantiate
+module functors at compile time.  This only works within modules, not across
+module files, for obvious reasons.  Instantiating functors at compile time
+can yield substantial performance improvements.
+
+You can build the fully documented code using:
+
+    :::sh
+    ocamlbuild functor_inst.native
 
 ---------------------------------------------------------------------------
 
