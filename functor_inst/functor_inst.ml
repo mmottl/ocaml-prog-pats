@@ -28,8 +28,7 @@ end
 (* Here we define the generic functor using a function.  It is apparently
    impossible to use ordinary module functors, because we cannot call "include"
    on first-class modules within those due to a compiler limitation. *)
-let func fl =
-  let module Float = (val fl : Arg) in
+let func (module Float : Arg) =
   Body
 
 (* Here we instantiate the generic functor, though using a function rather than
