@@ -206,7 +206,7 @@ can yield substantial performance improvements.
 You can build the fully documented code using:
 
     :::sh
-    ocamlbuild functor_inst.native
+    ocamlbuild -use-ocamlfind functor_inst.native
 
 ---------------------------------------------------------------------------
 
@@ -221,4 +221,4 @@ Up-to-date information concerning this tool should be available at:
 
 Enjoy!
 
-Markus Mottl in Rutherford, NJ on August 06, 2012
+Markus Mottl in Rutherford, NJ on November 29, 2012

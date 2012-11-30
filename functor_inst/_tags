@@ -1,1 +1,1 @@
-<functor_inst.ml>: pp(camlp4o -parser Camlp4MacroParser)
+<functor_inst.ml>: package(camlp4.macro), syntax(camlp4o)
