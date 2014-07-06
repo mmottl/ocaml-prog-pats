@@ -119,9 +119,10 @@ The file `main.ml` will start lexing from standard input with rule
 file `test.dat`.  You can compile and test the example by going to the
 `abstract_lexer` directory and executing:
 
-    :::sh
-    ocamlbuild main.native
-    ./main.native < test.dat
+```sh
+ocamlbuild main.native
+./main.native < test.dat
+```
 
 #### Fazit
 
@@ -149,8 +150,9 @@ compose multiple recursive "languages".
 See the file `ast.ml` in directory `extensible_ast`, which you can compile
 as follows:
 
-    :::sh
-    ocamlbuild ast.native
+```sh
+ocamlbuild ast.native
+```
 
 ### Arrows
 
@@ -205,8 +207,9 @@ can yield substantial performance improvements.
 
 You can build the fully documented code using:
 
-    :::sh
-    ocamlbuild -use-ocamlfind functor_inst.native
+```sh
+ocamlbuild -use-ocamlfind functor_inst.native
+```
 
 ---------------------------------------------------------------------------
 
@@ -217,8 +220,8 @@ In the case of bugs, feature requests, contributions and similar, you can
 contact me here: <markus.mottl@gmail.com>
 
 Up-to-date information concerning this tool should be available at:
-<https://bitbucket.org/mmottl/ocaml-prog-pats>
+<https://mmottl.github.io/ocaml-prog-pats>
 
 Enjoy!
 
-Markus Mottl in Rutherford, NJ on November 29, 2012
+Markus Mottl on November 29, 2012
