@@ -40,10 +40,10 @@ code to make it more reusable (e.g. abstract lexers, extensible ASTs).</p>
 <p>The package currently contains the following:</p>
 
 <ul>
-<li><a href="#abstract_lexer">Abstract Lexer</a></li>
-<li><a href="#extensible_asts">Extensible ASTs</a></li>
+<li><a href="#abstract-lexer">Abstract Lexer</a></li>
+<li><a href="#extensible-asts">Extensible ASTs</a></li>
 <li><a href="#arrows">Arrows</a></li>
-<li><a href="#functor_instantiation">Functor instantiation</a></li>
+<li><a href="#union-find">Union find</a></li>
 </ul>
 
 <h3>
@@ -239,17 +239,18 @@ arrow application and vice versa, thus proving their equivalence in terms
 of expressive power.</p>
 
 <h3>
-<a id="functor-instantiation" class="anchor" href="#functor-instantiation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functor instantiation</h3>
+<a id="union-find" class="anchor" href="#union-find" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Union find</h3>
 
-<p>The example in directory <code>functor_inst</code> demonstrates how to use the Camlp4
-preprocessor together with its standard <code>Camlp4MacroParser</code> to instantiate
-module functors at compile time.  This only works within modules, not across
-module files, for obvious reasons.  Instantiating functors at compile time
-can yield substantial performance improvements.</p>
+<p>The example in directory <code>union_find</code> demonstrates how to implement the
+union-find algorithm.  The example uses <em>Generalized Algebraic Datatypes</em>
+(GADTs) together with <em>mutable inline records</em> to implement highly efficient
+datastructures with fewer indirections and a smaller memory footprint than
+usual records and algebraic datatypes would allow.  You will need at least
+OCaml 4.04 to unbox away unnecessary data.</p>
 
-<p>You can build the fully documented code using:</p>
+<p>You can build the code using:</p>
 
-<div class="highlight highlight-source-shell"><pre>ocamlbuild -use-ocamlfind functor_inst.native</pre></div>
+<div class="highlight highlight-source-shell"><pre>ocamlbuild test_union_find.native</pre></div>
 
 <hr>
 
@@ -264,7 +265,7 @@ contact me here: <a href="mailto:markus.mottl@gmail.com">markus.mottl@gmail.com<
 
 <p>Enjoy!</p>
 
-<p>Markus Mottl on November 29, 2012</p>
+<p>Markus Mottl on September 21, 2016</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mmottl/ocaml-prog-pats">Ocaml-prog-pats</a> is maintained by <a href="https://github.com/mmottl">mmottl</a>.</span>
