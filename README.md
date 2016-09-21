@@ -18,10 +18,10 @@ Contents
 
 The package currently contains the following:
 
-  * [Abstract Lexer](#abstract_lexer)
-  * [Extensible ASTs](#extensible_asts)
+  * [Abstract Lexer](#abstract-lexer)
+  * [Extensible ASTs](#extensible-asts)
   * [Arrows](#arrows)
-  * [Functor instantiation](#functor_instantiation)
+  * [Union find](#union-find)
 
 ### Abstract Lexer
 
@@ -197,18 +197,19 @@ implements monads by showing how we can obtain one from an arrow supporting
 arrow application and vice versa, thus proving their equivalence in terms
 of expressive power.
 
-### Functor instantiation
+### Union find
 
-The example in directory `functor_inst` demonstrates how to use the Camlp4
-preprocessor together with its standard `Camlp4MacroParser` to instantiate
-module functors at compile time.  This only works within modules, not across
-module files, for obvious reasons.  Instantiating functors at compile time
-can yield substantial performance improvements.
+The example in directory `union_find` demonstrates how to implement the
+union-find algorithm.  The example uses _Generalized Algebraic Datatypes_
+(GADTs) together with _mutable inline records_ to implement highly efficient
+datastructures with fewer indirections and a smaller memory footprint than
+usual records and algebraic datatypes would allow.  You will need at least
+OCaml 4.04 to unbox away unnecessary data.
 
-You can build the fully documented code using:
+You can build the code using:
 
 ```sh
-ocamlbuild -use-ocamlfind functor_inst.native
+ocamlbuild test_union_find.native
 ```
 
 ---------------------------------------------------------------------------
@@ -224,4 +225,4 @@ Up-to-date information concerning this tool should be available at:
 
 Enjoy!
 
-Markus Mottl on November 29, 2012
+Markus Mottl on September 21, 2016
