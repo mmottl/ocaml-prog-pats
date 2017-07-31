@@ -1,12 +1,15 @@
-(* This does not work yet due to an OCaml 4.04 beta bug
-type ('a, 'kind) tree =
-  | Root : { mutable value : 'a; mutable rank : int } -> ('a, [ `root ]) tree
-  | Inner : { mutable parent : 'a node } -> ('a, [ `inner ]) tree
+(* NOTE: This does not work yet due to an OCaml 4.04 beta bug.  Should be
+   fixed before the release of OCaml 4.04. *)
 
-and 'a node = Node : ('a, _) tree -> 'a node  [@@ocaml.unboxed]
+(* type ('a, 'kind) tree = *)
+(*   | Root : { mutable value : 'a; mutable rank : int } -> ('a, [ `root ]) tree *)
+(*   | Inner : { mutable parent : 'a node } -> ('a, [ `inner ]) tree *)
+(*  *)
+(* and 'a node = Node : ('a, _) tree -> 'a node  [@@ocaml.unboxed] *)
+(*  *)
+(* type 'a t = ('a, [ `inner ]) tree *)
 
-type 'a t = ('a, [ `inner ]) tree
-*)
+(**)
 
 type ('a, 'kind, 'parent) tree =
   | Root : { mutable value : 'a; mutable rank : int } ->
