@@ -1,10 +1,6 @@
-OCaml Programming Patterns
-==========================
+## OCaml Programming Patterns
 
----------------------------------------------------------------------------
-
-Purpose
--------
+### Purpose
 
 This package contains some random programming tricks, "design patterns",
 and other helpful or at least inspiring ideas of achieving a high level of
@@ -13,8 +9,7 @@ demonstrate how to implement concepts of more or less theoretical interest
 (e.g. arrows, monads), others show more practical hints on how to structure
 code to make it more reusable (e.g. abstract lexers, extensible ASTs).
 
-Contents
---------
+### Contents
 
 The package currently contains the following:
 
@@ -23,9 +18,9 @@ The package currently contains the following:
   * [Arrows](#arrows)
   * [Union find](#union-find)
 
-### Abstract Lexer
+#### Abstract Lexer
 
-#### Quick introduction to syntactic analysis
+##### Quick introduction to syntactic analysis
 
 The first step in the process of compilation or interpretation of computer
 programs or other formal languages is typically lexical and syntactic analysis,
@@ -41,7 +36,7 @@ identify keywords, numbers, operators, etc.  The process of parsing assigns
 a grammatical structure to these elements, thus grouping them in ways that
 allow us to interpret the input more easily.
 
-#### Purpose of the abstract lexer
+##### Purpose of the abstract lexer
 
 The purpose of the _abstract lexer_ is to fully separate steps one and two
 above when using `ocamllex` to generate lexers.
@@ -81,7 +76,7 @@ parsers may want to just let the lexer continue matching further input rather
 than return a token, whereas others might want to see a token to relate it
 grammatically to others.
 
-#### Example implementation
+##### Example implementation
 
 The `abstract_lexer` directory contains the following files:
 
@@ -124,7 +119,7 @@ ocamlbuild main.native
 ./main.native < test.dat
 ```
 
-#### Fazit
+##### Fazit
 
 It seems recommendable to write new lexers in an abstract style as demonstrated
 above.  This will allow you to completely and cleanly separate the stages
@@ -141,7 +136,7 @@ rewritten to match one complex pattern and perform one action only instead.
 This will generally give a great boost to lexer performance, especially if
 it is abstract.
 
-### Extensible ASTs
+#### Extensible ASTs
 
 This simple example shows how to implement extensible abstract syntax trees
 (ASTs).  It uses polymorphic variants to achieve open recursion and to easily
@@ -154,7 +149,7 @@ as follows:
 ocamlbuild ast.native
 ```
 
-### Arrows
+#### Arrows
 
 This project in directory `arrows` mostly translates the Haskell-code
 presented in the following paper to OCaml:
@@ -197,7 +192,7 @@ implements monads by showing how we can obtain one from an arrow supporting
 arrow application and vice versa, thus proving their equivalence in terms
 of expressive power.
 
-### Union find
+#### Union find
 
 The example in directory `union_find` demonstrates how to implement the
 union-find algorithm.  The example uses _Generalized Algebraic Datatypes_
@@ -212,17 +207,10 @@ You can build the code using:
 ocamlbuild test_union_find.native
 ```
 
----------------------------------------------------------------------------
+### Contact Information and Contributing
 
-Contact Information and Contributing
-------------------------------------
+Please submit bugs reports, feature requests, contributions and similar to
+the [GitHub issue tracker](https://github.com/mmottl/ocaml-prog-pats/issues).
 
-In the case of bugs, feature requests, contributions and similar, you can
-contact me here: <markus.mottl@gmail.com>
-
-Up-to-date information concerning this tool should be available at:
+Up-to-date information is available at:
 <https://mmottl.github.io/ocaml-prog-pats>
-
-Enjoy!
-
-Markus Mottl on September 21, 2016
