@@ -82,7 +82,7 @@ The `abstract_lexer` directory contains the following files:
 
   * `lexer.mll`
   * `lexers.ml`
-  * `main.ml`
+  * `abstract_lexer.ml`
   * `test.dat`
 
 The `ocamllex` file `lexer.mll` demonstrates how to wrap a lexer into a
@@ -109,14 +109,13 @@ An example instance of this lexer is given in file `lexers.ml`.  It is called
 `Lexers.Alternating` and demonstrates how to specify recursive lexer rules.
 This is achieved by making the module `Alternating` itself recursive.
 
-The file `main.ml` will start lexing from standard input with rule
+The file `abstract_lexer.ml` will start lexing from standard input with rule
 `Lexers.Alternating.any_char`.  Valid example input can be found in
 file `test.dat`.  You can compile and test the example by going to the
 `abstract_lexer` directory and executing:
 
 ```sh
-ocamlbuild main.native
-./main.native < test.dat
+dune exec ./abstract_lexer.exe < test.dat
 ```
 
 ##### Fazit
@@ -143,10 +142,10 @@ This simple example shows how to implement extensible abstract syntax trees
 compose multiple recursive "languages".
 
 See the file `ast.ml` in directory `extensible_ast`, which you can compile
-as follows:
+and run as follows:
 
 ```sh
-ocamlbuild ast.native
+dune exec ./ast.exe
 ```
 
 #### Arrows
@@ -201,10 +200,10 @@ datastructures with fewer indirections and a smaller memory footprint than
 usual records and algebraic datatypes would allow.  You will need at least
 OCaml 4.04 to unbox away unnecessary data.
 
-You can build the code using:
+You can build and run the code using:
 
 ```sh
-ocamlbuild test_union_find.native
+dune exec ./test_union_find.exe
 ```
 
 ### Contact Information and Contributing

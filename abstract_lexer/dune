@@ -1,0 +1,3 @@
+(executable (name abstract_lexer))
+
+(ocamllex lexer)

@@ -1,5 +1,5 @@
-(* NOTE: This does not work yet due to an OCaml 4.04 beta bug.  Should be
-   fixed before the release of OCaml 4.04. *)
+(* NOTE: This does not work yet due to an OCaml bug.  May get fixed in
+   OCaml 4.08. *)
 
 (* type ('a, 'kind) tree = *)
 (*   | Root : { mutable value : 'a; mutable rank : int } -> ('a, [ `root ]) tree *)
@@ -27,6 +27,8 @@ let invariant t =
     | Node (Root r) -> assert (depth <= r.rank)
   in
   loop t 0
+
+let _ = invariant
 
 let create v = Inner { parent = Node (Root { value = v; rank = 0 }) }
 

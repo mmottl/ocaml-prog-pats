@@ -20,9 +20,13 @@ module type SIMPLE_ARROW = sig
       [x]. *)
 end
 
-(* Example implementations simple arrows *)
+(* Example implementations of simple arrows *)
+
 module SimpleArrow : SIMPLE_ARROW
-module SimpleContArrow : SIMPLE_ARROW (** Uses continuation-passing internally *)
+
+(** Uses continuation-passing internally *)
+module SimpleContArrow : SIMPLE_ARROW
+
 module SimpleDataContArrow : SIMPLE_ARROW
 
 
@@ -83,8 +87,12 @@ end
 module MkArrow (SA : SIMPLE_ARROW) : ARROW with type ('a, 'b) t = ('a, 'b) SA.t
 
 (** Example implementations of fully-featured arrows *)
+
 module Arrow : ARROW
-module ContArrow : ARROW  (** Uses continuation-passing internally *)
+
+(** Uses continuation-passing internally *)
+module ContArrow : ARROW
+
 module DataContArrow : ARROW
 
 
