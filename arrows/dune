@@ -1,1 +1,1 @@
-(executable (name arr))
+(executable (name arr) (modes byte exe))

@@ -1,1 +1,1 @@
-(executable (name test_union_find))
+(executable (name test_union_find) (modes byte exe))
