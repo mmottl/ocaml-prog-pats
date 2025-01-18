@@ -153,9 +153,9 @@ dune exec ./ast.exe
 This project in directory `arrows` mostly translates the Haskell-code
 presented in the following paper to OCaml:
 
-    Generalising Monads to Arrows
-    John Hughes
-    Science of Computer Programming 37, pp67-111, May 2000
+> Generalising Monads to Arrows
+> John Hughes
+> Science of Computer Programming 37, pp67-111, May 2000
 
 The project contains the following files:
 
